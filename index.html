@@ -44,11 +44,22 @@
       <!-- Cards -->
       <main>
         <div class="container">
-
+          <div class="row">
+            <div class="col-6">
+              <div
+                v-for="(vinyl, index) in vinyls"
+                class="card mt-4 text-center">
+                <img :src="vinyl.poster" class="card-img-top p-3" alt="" />
+                <div class="card-body">
+                  <h4 class="card-title"> {{ vinyl.title }}</h4>
+                  <p class="card-subtitle"> {{ vinyl.author }} </p>
+                  <h5 class="card-text mt-2"> {{ vinyl.year }} </h5>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
-
-      
     </div>
     <script src="js/script.js"></script>
   </body>
