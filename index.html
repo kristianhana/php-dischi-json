@@ -42,15 +42,13 @@
       </header>
 
       <!-- Cards -->
-      <main>
-        <div class="container">
-          <div class="row">
-            <div class="col-6">
-              <div
-                v-for="(vinyl, index) in vinyls"
-                class="card mt-4 text-center">
+      <main class="wrap">
+        <div class="container p-4">
+          <div class="row row-cols-3">
+            <div v-for="(vinyl, index) in vinyls" class="col d-flex">
+              <div class="card mt-4 text-center">
                 <img :src="vinyl.poster" class="card-img-top p-3" alt="" />
-                <div class="card-body">
+                <div class="card-body text-light">
                   <h4 class="card-title"> {{ vinyl.title }}</h4>
                   <p class="card-subtitle"> {{ vinyl.author }} </p>
                   <h5 class="card-text mt-2"> {{ vinyl.year }} </h5>
